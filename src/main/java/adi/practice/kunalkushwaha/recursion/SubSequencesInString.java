@@ -1,7 +1,6 @@
 package adi.practice.kunalkushwaha.recursion;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SubSequencesInString {
     public static void main(String[] args) {
@@ -10,8 +9,8 @@ public class SubSequencesInString {
         System.out.println(result);
     }
 
-    public static void subSequencesInString(String source, String subStrings){
-        if(source.isEmpty()){
+    public static void subSequencesInString(String source, String subStrings) {
+        if (source.isEmpty()) {
             System.out.println(subStrings);
             return;
         }
@@ -21,8 +20,8 @@ public class SubSequencesInString {
         subSequencesInString(source.substring(1), subStrings);
     }
 
-    public static ArrayList<String> subSequencesInString2(String source, String subStrings){
-        if(source.isEmpty()){
+    public static ArrayList<String> subSequencesInString2(String source, String subStrings) {
+        if (source.isEmpty()) {
             ArrayList<String> obj = new ArrayList<>();
             obj.add(subStrings);
             return obj;
