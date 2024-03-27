@@ -1,11 +1,11 @@
-package adi.practice.kunalkushwaha.tree.practicequestions;
+package adi.practice.kunalkushwaha.tree.practicequestions.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class _0_L102_BTLevelOrderTraversal {
+public class _4_L107_BTLevelOrderTraversalReverseBottomUp {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -29,9 +29,19 @@ public class _0_L102_BTLevelOrderTraversal {
             queue.offer(root);
 
             while(!queue.isEmpty()){
-                TreeNode removedNode = queue.remove();
-                queue.add(removedNode.left);
-                queue.add(removedNode.right);
+                int levelSize = queue.size();
+                List<Integer> currentLevelNode = new ArrayList<>(levelSize);
+                for(int i = 0; i < levelSize; ++i){
+                    TreeNode removedNode = queue.poll();
+                    currentLevelNode.add(removedNode.val);
+                    if(removedNode.left != null){
+                        queue.add(removedNode.left);
+                    }
+                    if(removedNode.right != null){
+                        queue.add(removedNode.right);
+                    }
+                }
+                answer.add(0, currentLevelNode);
             }
             return answer;
         }
