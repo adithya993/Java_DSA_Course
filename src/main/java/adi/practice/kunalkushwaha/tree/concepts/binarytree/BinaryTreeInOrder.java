@@ -135,7 +135,7 @@ public class BinaryTreeInOrder {
     public static class Main{
         public static void main(String[] args) {
             BinaryTreeInOrder tree = new BinaryTreeInOrder();
-             tree.bulkInitBinaryTreePreOrder(new int[] {5, 2, 7, 1, 4, 6, 9, 8, 3, 10});
+            tree.bulkInitBinaryTreePreOrder(new int[] {5, 2, 7, 1, 4, 6, 9, 8, 3, 10});
             tree.prettyDisplay();
             tree.inOrder();
         }
