@@ -15,7 +15,5 @@ public class Main {
         obj.startMusic();
         obj.upgradeEngine(new ElectricEngine());
         obj.stop();
-
-
     }
 }
